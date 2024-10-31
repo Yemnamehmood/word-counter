@@ -2,20 +2,115 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Basic resets and styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
+  background-color: #f0f4f8;
+  background-image: url('/Vanessa-Blog-Post-Length@2x.webp'); 
+  background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #245f66;
+}
+
+/* Centered container for the project */
+.container {
+  background: rgba(3, 13, 32, 0.9);
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Project title */
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #8fd6db;
+  font-weight: 700;
+}
+
+/* Textarea styling */
+.textarea {
+  width: 100%;
+  height: 100px;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Word and character counter */
+.counter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* Clear button styling */
+.clear-button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.clear-button:hover {
+  background-color: #357abd;
+}
+
+/* Footer styling */
+.footer {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: #8fd6db;
+}
+
+/* Media query for responsiveness on smaller screens */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .textarea {
+    height: 80px;
+    font-size: 0.9rem;
+  }
+
+  .counter {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .clear-button {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .footer {
+    font-size: 0.8rem;
+  }
 }
